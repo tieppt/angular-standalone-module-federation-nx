@@ -1,0 +1,8 @@
+<h2>App shell</h2>
+<button (click)="reloadMailbox()">
+  Reload mailbox {{ state.data | async | date }}
+</button>
+<br />
+
+<a [routerLink]="['mailbox']" [queryParams]="{ page: 10 }">go to mailbox</a>
+<router-outlet></router-outlet>

@@ -1,0 +1,24 @@
+{
+  "name": "state",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/state/src",
+  "prefix": "fe-mf",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/state"],
+      "options": {
+        "jestConfig": "libs/state/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/state/**/*.ts", "libs/state/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}
